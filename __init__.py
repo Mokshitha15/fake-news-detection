@@ -1,21 +1,16 @@
 """
-Database module - MySQL operations for fake news detection
+Utilities module - NLP, analysis, and preprocessing utilities
 """
-
-from .db import (
-    connect_db,
-    initialize_db,
-    save_result,
-    fetch_results,
-    fetch_recent_results,
-    is_database_connected
-)
+from .predictor import predict_news
+from .verifier import verify_news
+from .explain import explain_news
+from .preprocess import clean_text, extract_keywords, highlight_suspicious_words
 
 __all__ = [
-    'connect_db',
-    'initialize_db',
-    'save_result',
-    'fetch_results',
-    'fetch_recent_results',
-    'is_database_connected'
+    'predict_news',
+    'verify_news',
+    'explain_news',
+    'clean_text',
+    'extract_keywords',
+    'highlight_suspicious_words'
 ]
